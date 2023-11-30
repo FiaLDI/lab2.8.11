@@ -12,7 +12,7 @@ def get_worker():
     name = input("Фамилия и инициалы? ")
     post = input("Должность? ")
     year = int(input("Год поступления? "))
-    # Создать словарь.
+
     return {
         'name': name,
         'post': post,
@@ -26,18 +26,18 @@ def display_workers(staff):
     """
     if staff:
         line = '+-{}-+-{}-+-{}-+-{}-+'.format(
-        '-' * 4,
+            '-' * 4,
             '-' * 30,
             '-' * 20,
             '-' * 8
         )
         print(line)
         print(
-        '| {:^4} | {:^30} | {:^20} | {:^8} |'.format(
-            "№",
-            "Ф.И.О.",
-            "Должность",
-            "Год"
+            '| {:^4} | {:^30} | {:^20} | {:^8} |'.format(
+                "№",
+                "Ф.И.О.",
+                "Должность",
+                "Год"
             )
         )
         print(line)
@@ -45,11 +45,11 @@ def display_workers(staff):
             print(
                 '| {:>4} | {:<30} | {:<20} | {:>8} |'.format(
                     idx,
-                worker.get('name', ''),
-                worker.get('post', ''),
-                worker.get('year', 0)
+                    worker.get('name', ''),
+                    worker.get('post', ''),
+                    worker.get('year', 0)
+                )
             )
-        )
         print(line)
        
     else:
