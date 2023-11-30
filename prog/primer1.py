@@ -6,6 +6,9 @@ from datetime import date
 
 
 def get_worker():
+    """
+    Запросить данные о работнике.
+    """
     name = input("Фамилия и инициалы? ")
     post = input("Должность? ")
     year = int(input("Год поступления? "))
@@ -18,6 +21,9 @@ def get_worker():
 
       
 def display_workers(staff):
+    """
+    Отобразить список работников.
+    """
     if staff:
         line = '+-{}-+-{}-+-{}-+-{}-+'.format(
         '-' * 4,
@@ -29,7 +35,7 @@ def display_workers(staff):
         print(
         '| {:^4} | {:^30} | {:^20} | {:^8} |'.format(
             "№",
-                    "Ф.И.О.",
+            "Ф.И.О.",
             "Должность",
             "Год"
             )
@@ -51,6 +57,9 @@ def display_workers(staff):
        
        
 def select_workers(staff, period):
+    """
+    Выбрать работников с заданным стажем.
+    """
     today = date.today()
     result = []
     for employee in staff:
@@ -60,16 +69,23 @@ def select_workers(staff, period):
 
 
 def main():
+    """
+    Главная функция программы.
+    """
     workers = []
+
     while True:
         command = input(">>> ").lower()
+
         if command == 'exit':
             break
+
         elif command == 'add':
             worker = get_worker()
             workers.append(worker)
             if len(workers) > 1:
                 workers.sort(key=lambda item: item.get('name', ''))
+
         elif command == 'list':
             display_workers(workers)
         elif command.startswith('select '):
@@ -77,6 +93,7 @@ def main():
             period = int(parts[1])
             selected = select_workers(workers, period)
             display_workers(selected)
+
         elif command == 'help':
             print("Список команд:\n")
             print("add - добавить работника;")
@@ -84,6 +101,7 @@ def main():
             print("select <стаж> - запросить работников со стажем;")
             print("help - отобразить справку;")
             print("exit - завершить работу с программой.")
+
         else:
             print(f"Неизвестная команда {command}", file=sys.stderr)
 

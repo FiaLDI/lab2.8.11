@@ -1,19 +1,25 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-def proizv():
-    pr = 1
+def work_up_to():
+    """
+    Считывает и перемножает числа.
+    """
+    work = 1
 
     while True:
         x = int(input())
         if x == 0:
             break
-        pr *= x
+        work *= x
     
-    return pr
+    return work
 
 def main():
-    print(proizv())
+    """
+    Главная функция программы.
+    """
+    print(work_up_to())
 
 if __name__ == "__main__" :
     main()

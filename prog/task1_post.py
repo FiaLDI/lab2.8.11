@@ -3,17 +3,32 @@
 
 
 def test(x):
+    """
+    Проверка числа на четность
+    """
     if x % 2 == 0:
         positive(x)
     else:
         negative(x)
 
 def negative(x):
+    """
+    Вывод информации о четности числа
+    """
     print("Отрицательное")
 
 def positive(x):
+    """
+    Вывод информации о четности числа
+    """
     print("Положительное")
 
-if __name__ == '__main__':
+def main():
+    """
+    Главная функция программы.
+    """
     x = int(input(""))
     test(x)
+
+if __name__ == '__main__':
+    main()
