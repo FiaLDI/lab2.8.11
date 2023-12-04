@@ -88,6 +88,7 @@ def main():
 
         elif command == 'list':
             display_workers(workers)
+        
         elif command.startswith('select '):
             parts = command.split(' ', maxsplit=1)
             period = int(parts[1])
