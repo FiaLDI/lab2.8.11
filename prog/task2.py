@@ -15,11 +15,13 @@ def cylinder(r, h):
     
     return 2 * circle(r) + 2 * pi * r * h
 
+
 def main():
     """
     Главная функция программы.
     """
     print(cylinder(3, 4))
+
 
 if __name__ == '__main__':
     main()

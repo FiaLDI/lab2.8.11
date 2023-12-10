@@ -15,11 +15,13 @@ def work_up_to():
     
     return work
 
+
 def main():
     """
     Главная функция программы.
     """
     print(work_up_to())
+
 
 if __name__ == "__main__" :
     main()

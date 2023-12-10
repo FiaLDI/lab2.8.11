@@ -52,7 +52,7 @@ def display_products(workers):
         print(line)
        
     else:
-        print("Список работников пуст.")
+        print("Список продуктов пуст.")
        
        
 def select_products(products, find_name):

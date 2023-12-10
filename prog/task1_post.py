@@ -6,10 +6,11 @@ def test(x):
     """
     Проверка числа на четность
     """
-    if x % 2 == 0:
+    if x > 0:
         positive(x)
     else:
         negative(x)
+
 
 def negative(x):
     """
@@ -17,11 +18,13 @@ def negative(x):
     """
     print("Отрицательное")
 
+
 def positive(x):
     """
     Вывод информации о четности числа
     """
     print("Положительное")
+
 
 def main():
     """
@@ -29,6 +32,7 @@ def main():
     """
     x = int(input(""))
     test(x)
+
 
 if __name__ == '__main__':
     main()
